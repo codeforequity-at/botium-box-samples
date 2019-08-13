@@ -1,0 +1,55 @@
+{
+    "mutation": "createTestSet",
+    "data": {
+        "name": "Botium Samples - Test Set with Utterances",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Scripting"
+            ]
+        },
+        "expandConvos": true,
+        "expandConvosMode": "UTTEXPANSION_MODE_ALL",
+        "expandUtterancesToConvos": false,
+        "expandScriptingMemory": false,
+        "scripts": {
+            "create": [
+                {
+                "name": "hello (no utterances)",
+                "scriptType": "SCRIPTING_TYPE_CONVO",
+                "script": "hello (no utterances)\n\n#me\nhello bot!\n\n#bot\nHello, meat bag! How can I help you ?\n"
+                },
+                {
+                    "name": "hello (input utterances)",
+                    "scriptType": "SCRIPTING_TYPE_CONVO",
+                    "script": "hello (input utterances)\n\n#me\nHELLO_UTT\n\n#bot\nHello, meat bag! How can I help you ?\n"
+                },
+                {
+                    "name": "hello (input and output utterances)",
+                    "scriptType": "SCRIPTING_TYPE_CONVO",
+                    "script": "hello (input and output utterances)\n\n#me\nHELLO_UTT\n\n#bot\nBOT_GREETING_UTT\n"
+                },
+                {
+                    "name": "hello (parameterized utterances)",
+                    "scriptType": "SCRIPTING_TYPE_CONVO",
+                    "script": "hello (parameterized utterances)\n\n#me\nGREETING_NAME_UTT Bot\n\n#bot\nBOT_GREETING_UTT\n"
+                },
+                {
+                    "name": "HELLO_UTT",
+                    "scriptType": "SCRIPTING_TYPE_UTTERANCES",
+                    "script": "HELLO_UTT\nhello bot!\nhi bot!\nhey dude\ngood evening\nhey are you here\nanyone at home ?\n"
+                },
+                {
+                    "name": "BOT_GREETING_UTT",
+                    "scriptType": "SCRIPTING_TYPE_UTTERANCES",
+                    "script": "BOT_GREETING_UTT\nGood evening\nGood morning\nHello\nHi\n"
+                },
+                {
+                    "name": "GREETING_NAME_UTT",
+                    "scriptType": "SCRIPTING_TYPE_UTTERANCES",
+                    "script": "GREETING_NAME_UTT\nhi, %s\nhello, %s\n"
+                }
+            ]
+        }
+    }
+}

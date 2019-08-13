@@ -1,0 +1,62 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - SAP CAI",
+        "description": "Test Suite for SAP CAI (formerly known as Recast.ai)",
+        "code": "Botium-Samples-SAP-CAI",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "SAP"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - SAP CAI Bot",
+                "description": "Chatbot simulator for evaluating Botium and Botium Box features. Sample commands: 'buttons', 'show me buttons', 'picture', 'show me a picture', 'card', 'show me a card'. Otherwise the input is echoed back.",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "SAP"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"sapcai" },
+                        { "name":"SAPCAI_TOKEN","type":"STRING","stringValue":"4bcab589a665e9a5e46f1abdec3eac75" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - SAP CAI Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "SAP"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                            "name": "hi",
+                            "scriptType": "SCRIPTING_TYPE_CONVO",
+                            "script": "hi\n\n#me\nhello\n\n#bot\nHi, nice to meet you :)\n"
+                            },
+                            {
+                                "name": "how are you",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "how are you\n\n#me\nhow are you\n\n#bot\n\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

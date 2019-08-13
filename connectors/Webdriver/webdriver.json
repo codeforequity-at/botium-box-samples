@@ -1,0 +1,85 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Webdriver",
+        "description": "Test Suite for Webdriver Connector",
+        "code": "Botium-Samples-Webdriver",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Webdriver"
+            ]
+        },
+        "deviceSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Webdriver",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Webdriver"
+                        ]
+                    },
+                    "provider": {
+                        "connect": {
+                            "name": "Integrated PhantomJS"
+                      }
+                    },
+                    "devices": {
+                        "create": [
+                            {
+                                "name": "PhantomJS Virtual Browser",
+                                "type": "DESKTOP",
+                                "capabilities": "{ \"browserName\": \"phantomjs\" }"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Webdriver Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Webdriver"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"webdriverio" },
+                        { "name":"WEBDRIVERIO_URL","type":"STRING","stringValue":"https://console.dialogflow.com/api-client/demo/embedded/d388ac41-5c60-483f-b89b-0ec0d99d848d" },
+                        { "name":"WEBDRIVERIO_PROFILE","type":"STRING","stringValue":"dialogflow_com" },
+                        { "name":"WEBDRIVERIO_SCREENSHOTS","type":"STRING","stringValue":"onstop" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Webdriver Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Webdriver"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                            "name": "hi",
+                            "scriptType": "SCRIPTING_TYPE_CONVO",
+                            "script": "hi\n\n#me\nhello\n\n#bot\n\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
