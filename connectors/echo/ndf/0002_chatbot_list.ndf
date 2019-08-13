@@ -1,0 +1,13 @@
+{
+  "valueType": "lists",
+  "values": [
+    {
+        "_typeName": "Chatbot", 
+        "id": "botiumsample4q06780oo71aq",
+        "tags": [
+          "Demo",
+          "Echo"
+        ]
+    }
+  ]
+}

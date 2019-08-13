@@ -1,0 +1,12 @@
+{
+  "valueType": "nodes",
+  "values": [
+    {
+        "_typeName": "Chatbot", 
+        "id": "botiumsample4q06780oo71aq", 
+        "name": "Echo Bot", 
+        "description": "Chatbot simulator for evaluating Botium and Botium Box features. Sample commands: 'buttons', 'show me buttons', 'picture', 'show me a picture', 'card', 'show me a card'. Otherwise the input is echoed back.",
+        "allowHtmlDisplay": true
+    }
+  ]
+}

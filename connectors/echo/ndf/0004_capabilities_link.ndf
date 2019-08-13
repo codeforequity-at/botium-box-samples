@@ -1,0 +1,9 @@
+{
+  "valueType": "relations",
+  "values": [
+    [
+      { "_typeName": "Chatbot", "id": "botiumsample4q06780oo71aq", "fieldName": "capabilities" },
+      { "_typeName": "Capability", "id": "botiumsample4q06780oo0001" }
+    ]
+  ]
+}

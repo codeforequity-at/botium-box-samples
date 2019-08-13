@@ -1,0 +1,12 @@
+{
+  "valueType": "nodes",
+  "values": [
+    {
+        "_typeName": "Capability", 
+        "id": "botiumsample4q06780oo0001", 
+        "name": "CONTAINERMODE", 
+        "type": "STRING",
+        "stringValue": "echo"
+    }
+  ]
+}
