@@ -1,0 +1,72 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Scripting Memory",
+        "description": "Test Suite for Scripting Memory",
+        "code": "Botium-Samples-Scripting-Memory",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Scripting Memory"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Scripting Memory Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Scripting Memory"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"echo" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Scripting Memory Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Scripting Memory"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": true,
+                    "useScriptingMemory": true,
+                    "useScriptingMemoryMatchingMode": "MATCHING_MODE_WORD",
+                    "scripts": {
+                        "create": [
+                            {
+                                "name": "shopping cart from scripting memory file",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "shopping cart from scripting memory file\r\n\r\n#me\r\nadd to cart $product_count $product_name\r\n\r\n#bot\r\nAdded to cart: $product_count $product_name\r\n\r\n#me\r\nshow cart\r\n\r\n#bot\r\nIn your cart: $product_count $product_name"
+                            },
+                            {
+                                "name": "Scripting Memory",
+                                "scriptType": "SCRIPTING_TYPE_SCRIPTING_MEMORY",
+                                "script": "      |$product_name    |$product_count \r\nCase1 |Bananas \t\t\t|2\r\nCase2 |Kiwi     \t\t|1"
+                            },
+                            {
+                                "name": "shopping cart from SET_SCRIPTING_MEMORY",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "shopping cart from SET_SCRIPTING_MEMORY\r\n\r\n#begin\r\nSET_SCRIPTING_MEMORY myproduct|bananas\r\n\r\n#me\r\nadd to cart $myproduct\r\n\r\n#bot\r\nadded to cart: $myproduct\r\n\r\n#me\r\nshow cart\r\n\r\n#bot\r\nin your cart: $myproduct"
+                            },
+                            {
+                                "name": "call scripting memory functions",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "call scripting memory functions\r\n\r\n#me\r\nhere you have a random number: $random10\r\n\r\n#bot\r\n\r\n#me\r\ncurrent date and time: $now_EN\r\n\r\n#bot\r\n\r\n#me\r\nand now custom formatted date: $date(YYYY-MM-DD)\r\n\r\n#bot\r\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
