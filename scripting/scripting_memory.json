@@ -61,7 +61,7 @@
                             {
                                 "name": "call scripting memory functions",
                                 "scriptType": "SCRIPTING_TYPE_CONVO",
-                                "script": "call scripting memory functions\r\n\r\n#me\r\nhere you have a random number: $random10\r\n\r\n#bot\r\n\r\n#me\r\ncurrent date and time: $now_EN\r\n\r\n#bot\r\n\r\n#me\r\nand now custom formatted date: $date(YYYY-MM-DD)\r\n\r\n#bot\r\n"
+                                "script": "call scripting memory functions\r\n\r\n#me\r\nhere you have a random number: $random10\r\n\r\n#bot\r\n\r\n#me\r\ncurrent date and time: $now_EN\r\n\r\n#bot\r\n\r\n#me\r\nand now custom formatted date: $date(YYYY-MM-DD)\r\n\r\n#bot\r\n\r\n#me\r\nthis is my hostname: $func(require(\"os\"\\).hostname(\\))\r\n\r\n#bot\r\n"
                             }
                         ]
                     }
