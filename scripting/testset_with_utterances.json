@@ -15,9 +15,9 @@
         "scripts": {
             "create": [
                 {
-                "name": "hello (no utterances)",
-                "scriptType": "SCRIPTING_TYPE_CONVO",
-                "script": "hello (no utterances)\n\n#me\nhello bot!\n\n#bot\nHello, meat bag! How can I help you ?\n"
+                    "name": "hello (no utterances)",
+                    "scriptType": "SCRIPTING_TYPE_CONVO",
+                    "script": "hello (no utterances)\n\n#me\nhello bot!\n\n#bot\nHello, meat bag! How can I help you ?\n"
                 },
                 {
                     "name": "hello (input utterances)",

@@ -1,0 +1,60 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - NLP Asserters",
+        "description": "Test Suite for NLP Asserters",
+        "code": "Botium-Samples-NLP-Asserters",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "NLP Asserters"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - NLP Asserters Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "NLP Asserters"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"echo" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - NLP Asserters Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "NLP Asserters"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                                "name": "shopping cart",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "shopping cart\r\n\r\n#me\r\nadd to cart bananas\r\n\r\n#bot\r\nINTENT addtocart\r\nINTENT_CONFIDENCE 50\r\nENTITIES product|..\r\nENTITY_VALUES bananas|..\r\n\r\n#me\r\nshow cart\r\n\r\n#bot\r\nIn your cart: bananas\r\nINTENT showcart\r\nINTENT_CONFIDENCE 50\r\n\r\n#me\r\nclear cart\r\n\r\n#bot\r\nINTENT clearcart\r\nINTENT_CONFIDENCE 50\r\n"
+                            },
+                            {
+                                "name": "should fail because weak intent",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "should fail because weak intent\r\n\r\n#me\r\nweak intent\r\n\r\n#bot\r\nINTENT weak\r\nINTENT_CONFIDENCE 50"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
