@@ -1,0 +1,89 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Webdriver-Custom",
+        "description": "Test Suite for Webdriver Connector with Custom Selenium Code",
+        "code": "Botium-Samples-Webdriver-Custom",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Webdriver-Custom"
+            ]
+        },
+        "deviceSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Webdriver-Custom",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Webdriver-Custom"
+                        ]
+                    },
+                    "provider": {
+                        "connect": {
+                            "name": "Integrated PhantomJS"
+                      }
+                    },
+                    "devices": {
+                        "create": [
+                            {
+                                "name": "PhantomJS Virtual Browser",
+                                "type": "DESKTOP",
+                                "capabilities": "{ \"browserName\": \"phantomjs\" }"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Webdriver-Custom Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Webdriver-Custom"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"webdriverio" },
+                        { "name":"WEBDRIVERIO_URL","type":"STRING","stringValue":"https://www.drei.at" },
+                        { "name":"WEBDRIVERIO_INPUT_ELEMENT","type":"STRING","stringValue":"#textInput" },
+                        { "name":"WEBDRIVERIO_OPENBOT","type":"JS","stringValue":"browser\r\n    .waitForVisible('.cc-btn', 20000).then(() => console.log('cc-btn visible'))\r\n    .click('.cc-btn')\r\n    .pause(2000)\r\n    .waitForVisible('#StartChat', 20000).then(() => console.log('troy button visible'))\r\n    .click('#StartChat')\r\n    .waitForVisible('#chat', 10000).then(() => console.log('troy window visible'))\r\n    .waitForVisible('#textInput', 10000).then(() => console.log('troy textInput visible'))\r\n    .waitForVisible('.from-watson', 10000).then(() => console.log('troy welcome visible'))\r\n" },
+                        { "name":"WEBDRIVERIO_INPUT_ELEMENT_SENDBUTTON","type":"STRING","stringValue":".troy__send" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT","type":"STRING","stringValue":".from-watson" },
+                        { "name":"WEBDRIVERIO_IGNOREWELCOMEMESSAGES","type":"INT","intValue":1 },
+                        { "name":"WEBDRIVERIO_SCREENSHOTS","type":"STRING","stringValue":"onstop" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Webdriver-Custom Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Webdriver-Custom"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                            "name": "hallo",
+                            "scriptType": "SCRIPTING_TYPE_CONVO",
+                            "script": "hallo\n\n#me\nhallo\n\n#bot\n\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
