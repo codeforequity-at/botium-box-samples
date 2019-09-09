@@ -1,0 +1,97 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Directline3",
+        "description": "Test Suite for Directline3 (Azure Bot Service)",
+        "code": "Botium-Samples-Directline3",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Directline3"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Directline3 Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Directline3"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"directline3" },
+                        { "name":"DIRECTLINE3_SECRET","type":"STRING","stringValue":"XBlcKo_40Gg.vVERiqeLPKcjpv_cGRE_1BIKRgo-c2Nruf_3mZUqhT8" },
+                        { "name":"DIRECTLINE3_BUTTON_TYPE","type":"STRING","stringValue":"message" },
+                        { "name":"DIRECTLINE3_BUTTON_VALUE_FIELD","type":"STRING","stringValue":"text" },
+                        { "name":"DIRECTLINE3_HANDLE_ACTIVITY_TYPES","type":"STRING","stringValue":"message,event" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Directline3 Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Directline3"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                                "name": "adaptive",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "adaptive\r\n\r\n#me\r\nBUTTON card bingsports\r\n\r\n#bot\r\nBUTTONS Image action|Column action|Container action"
+                            },
+                            {
+                                "name": "button",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "button\r\n\r\n#me\r\nBUTTON card markdown\r\n\r\n#bot\r\nShowing  markdown"
+                            },
+                            {
+                                "name": "card",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "card\r\n\r\n#me\r\nBUTTON thumbnailcard\r\n\r\n#bot\r\nMicrosoft Surface Pro\r\nMEDIA surface1.jpg"
+                            },
+                            {
+                                "name": "event",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "event\r\n\r\n#me\r\nsample:backchannel\r\n\r\n#bot\r\nI am sending an `event` activity like below\r\n\r\n#bot\r\nsample:backchannel"
+                            },
+                            {
+                                "name": "form",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "form\r\n\r\n#me\r\nBUTTON card inputs\r\n\r\n#bot\r\nBUTTONS Open Url|Submit|Show Card\r\n\r\n#me\r\nFORM SimpleVal|myname\r\nFORM UrlVal|myhomepage\r\nFORM EmailVal|myemail\r\nFORM CompactSelectVal|2\r\nFORM MultiSelectVal|1;2\r\nFORM IsCool\r\n\r\n#bot\r\nYou posted"
+                            },
+                            {
+                                "name": "help",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "help\r\n\r\n#me\r\nhelp\r\n\r\n#bot\r\nBUTTONS Show Markdown using Adaptive Card"
+                            },
+                            {
+                                "name": "imageupload",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "imageupload\r\n\r\n#me\r\nupload\r\n\r\n#bot\r\nYou have uploaded no files.\r\n\r\n#me\r\nupload\r\nMEDIA https:\/\/www.botium.at\/images\/logo.png\r\n\r\n#bot"
+                            },
+                            {
+                                "name": "jsonbutton",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "jsonbutton\r\n\r\n#me\r\nBUTTON {\"hello\": \"World!\"}\r\n\r\n#bot\r\nYou posted"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
+
+

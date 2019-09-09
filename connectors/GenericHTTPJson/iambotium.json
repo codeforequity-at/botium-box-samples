@@ -1,0 +1,77 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - I am Botium (HTTP/Json)",
+        "description": "Test Suite for Generic HTTP/Json",
+        "code": "Botium-Samples-HttpJson",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "HttpJson",
+                "IAmBotium"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - I am Botium Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "HttpJson",
+                        "IAmBotium"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"simplerest" },
+                        { "name":"SIMPLEREST_URL","type":"STRING","stringValue":"https://box.botium.at/iambotium/reply" },
+                        { "name":"SIMPLEREST_METHOD","type":"STRING","stringValue":"POST" },
+                        { "name":"SIMPLEREST_RESPONSE_JSONPATH","type":"STRING","stringValue":"$.reply" },
+                        { "name":"SIMPLEREST_BODY_TEMPLATE","type":"STRING","stringValue":"{ \"username\": \"botium\", \"message\": \"{{msg.messageText}}\" }" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - I am Botium Test Set",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "HttpJson",
+                            "IAmBotium"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": true,
+                    "expandUtterancesIncomprehension": "INCOMPREHENSION",
+                    "expandScriptingMemory": false,
+                    "repositories": {
+                        "create": [
+                        {
+                            "name": "Botium Utterances - Smalltalk",
+                            "giturl": "https://github.com/codeforequity-at/botium-utterances.git",
+                            "gitbranch": "master",
+                            "gitdir": "convos/smalltalk",
+                            "globFilter": "**/*.en.utterances.txt"
+                        }
+                      ]
+                    },                    
+                    "scripts": {
+                        "create": [
+                            {
+                                "name": "INCOMPREHENSION",
+                                "scriptType": "SCRIPTING_TYPE_UTTERANCES",
+                                "script": "INCOMPREHENSION\nlol\nokay\nso...\ngo on\numm\ninteresting\nreally?"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
+
+
