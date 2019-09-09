@@ -6,6 +6,7 @@
         "code": "Hello-World-Test-Suite",
         "tags": {
             "set": [
+                "BotiumSamples",
                 "HelloWorld"
             ]
         },
@@ -15,6 +16,7 @@
                 "description": "Chatbot simulator for evaluating Botium and Botium Box features. Sample commands: 'buttons', 'show me buttons', 'picture', 'show me a picture', 'card', 'show me a card'. Otherwise the input is echoed back.",
                 "tags": {
                     "set": [
+                        "BotiumSamples",
                         "HelloWorld"
                     ]
                 },
@@ -32,6 +34,7 @@
                     "description": "Just some basic sample scripts",
                     "tags": {
                         "set": [
+                            "BotiumSamples",
                             "HelloWorld"
                         ]
                     },
