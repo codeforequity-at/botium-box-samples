@@ -43,6 +43,7 @@
                             "IAmBotium"
                         ]
                     },
+                    "useMatchingMode": "MATCHING_MODE_INCLUDEIGNORECASE",
                     "expandConvos": false,
                     "expandUtterancesToConvos": true,
                     "expandUtterancesIncomprehension": "INCOMPREHENSION",
