@@ -27,7 +27,7 @@
                         { "name":"SIMPLEREST_URL","type":"STRING","stringValue":"https://box.botium.at/iambotium/reply" },
                         { "name":"SIMPLEREST_METHOD","type":"STRING","stringValue":"POST" },
                         { "name":"SIMPLEREST_RESPONSE_JSONPATH","type":"STRING","stringValue":"$.reply" },
-                        { "name":"SIMPLEREST_BODY_TEMPLATE","type":"STRING","stringValue":"{ \"username\": \"botium\", \"message\": \"{{msg.messageText}}\" }" }
+                        { "name":"SIMPLEREST_BODY_TEMPLATE","type":"JSON","jsonValue":"{ \"username\": \"botium\", \"message\": \"{{msg.messageText}}\" }" }
                     ]
                 }
             }
