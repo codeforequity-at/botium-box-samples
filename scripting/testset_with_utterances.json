@@ -37,17 +37,17 @@
                 {
                     "name": "HELLO_UTT",
                     "scriptType": "SCRIPTING_TYPE_UTTERANCES",
-                    "script": "HELLO_UTT\nhello bot!\nhi bot!\nhey dude\ngood evening\nhey are you here\nanyone at home ?\n"
+                    "script": "HELLO_UTT\nhello bot!\nhi bot!\nhey dude\ngood evening\nhey are you here\nanyone at home ?"
                 },
                 {
                     "name": "BOT_GREETING_UTT",
                     "scriptType": "SCRIPTING_TYPE_UTTERANCES",
-                    "script": "BOT_GREETING_UTT\nGood evening\nGood morning\nHello\nHi\n"
+                    "script": "BOT_GREETING_UTT\nGood evening\nGood morning\nHello\nHi"
                 },
                 {
                     "name": "GREETING_NAME_UTT",
                     "scriptType": "SCRIPTING_TYPE_UTTERANCES",
-                    "script": "GREETING_NAME_UTT\nhi, %s\nhello, %s\n"
+                    "script": "GREETING_NAME_UTT\nhi, %s\nhello, %s"
                 }
             ]
         }
