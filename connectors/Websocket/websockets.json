@@ -1,0 +1,20 @@
+{
+    "mutation": "createChatbot",
+    "data": {
+        "name": "Botium Samples - Websocket",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Websocket"
+            ]
+        },
+        "capabilities": {
+            "create": [
+                { "name":"CONTAINERMODE","type":"STRING","stringValue":"websocket" },
+                { "name":"WEBSOCKET_URL","type":"STRING","stringValue":"wss://box.botium.at/websocket/" },
+                { "name":"WEBSOCKET_REQUEST_BODY_TEMPLATE","type":"STRING","stringValue":"{\r\n        \"conversationId\": \"botium\",\r\n        \"text\": \"{{msg.messageText}}\"\r\n}" },
+                { "name":"WEBSOCKET_RESPONSE_TEXTS_JSONPATH","type":"STRING","stringValue":"$.text" }
+            ]
+        }
+    }
+}
