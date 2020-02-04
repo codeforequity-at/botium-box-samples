@@ -1,0 +1,65 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Mitsuku (Pandorabots)",
+        "description": "Test Suite for Mitsuku (Pandorabots)",
+        "code": "Botium-Samples-HttpJson",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Pandorabots",
+                "Mitsuku"
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Mitsuku Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Pandorabots",
+                        "Mitsuku"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"pandorabots" },
+                        { "name":"PANDORABOTS_BOTKEY","type":"STRING","stringValue":"n0M6dW2XZacnOgCWTp0FRYUuMjSfCkJGgobNpgPv9060_72eKnu3Yl-o1v2nFGtSXqfwJBG2Ros~" },
+                        { "name":"PANDORABOTS_APIHOST","type":"STRING","stringValue":"miapi.pandorabots.com" },
+                        { "name":"SIMPLEREST_HEADERS_TEMPLATE","type":"JSON","jsonValue":"{ \"Origin\": \"https://www.pandorabots.com\", \"Referer\": \"https://www.pandorabots.com/mitsuku/\" }" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Mitsuku Test Set",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Pandorabots",
+                            "Mitsuku"
+                        ]
+                    },
+                    "useMatchingMode": "MATCHING_MODE_INCLUDEIGNORECASE",
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                                "name": "mood",
+                                "scriptType": "SCRIPTING_TYPE_CONVO",
+                                "script": "mood\n\n#me\nHow do you feel?\n\n#bot\nI feel with my hands!\nI feel fine thanks for asking.\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
+
+
