@@ -19,6 +19,7 @@
                         "Directline3"
                     ]
                 },
+                "mediaDownload": true,
                 "capabilities": {
                     "create": [
                         { "name":"CONTAINERMODE","type":"STRING","stringValue":"directline3" },
