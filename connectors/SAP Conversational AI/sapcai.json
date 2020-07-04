@@ -22,7 +22,7 @@
                 "capabilities": {
                     "create": [
                         { "name":"CONTAINERMODE","type":"STRING","stringValue":"sapcai" },
-                        { "name":"SAPCAI_TOKEN","type":"STRING","stringValue":"4bcab589a665e9a5e46f1abdec3eac75" }
+                        { "name":"SAPCAI_TOKEN","type":"STRING","stringValue":"5ee1b84709db76f5bbff8ea14dc9ad85" }
                     ]
                 }
             }
