@@ -22,15 +22,15 @@
                     },
                     "provider": {
                         "connect": {
-                            "name": "Integrated PhantomJS"
+                            "name": "Headless Chrome"
                       }
                     },
                     "devices": {
                         "create": [
                             {
-                                "name": "PhantomJS Virtual Browser",
+                                "name": "Headless Chrome",
                                 "type": "DESKTOP",
-                                "capabilities": "{ \"browserName\": \"phantomjs\" }"
+                                "capabilities": "{ \"browserName\": \"chrome\" }"
                             }
                         ]
                     }

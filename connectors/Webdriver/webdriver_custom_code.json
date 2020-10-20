@@ -51,9 +51,11 @@
                         { "name":"CONTAINERMODE","type":"STRING","stringValue":"webdriverio" },
                         { "name":"WEBDRIVERIO_URL","type":"STRING","stringValue":"https://www.drei.at" },
                         { "name":"WEBDRIVERIO_INPUT_ELEMENT","type":"STRING","stringValue":"#textInput" },
-                        { "name":"WEBDRIVERIO_OPENBOT","type":"JS","stringValue":"result = browser.$('#StartChat')\r\n    .then(startChat => startChat.waitForClickable(20000).then(() => startChat.click()))\r\n    .then(() => browser.$('#chat').then(c => c.waitForDisplayed(10000)))\r\n    .then(() => browser.$('#textInput').then(t => t.waitForDisplayed(10000)))\r\n    .then(() => browser.$('.from-watson').then(f => f.waitForDisplayed(10000)))" },
+                        { "name":"WEBDRIVERIO_INPUT_NAVIGATION_BUTTONS","type":"JSON","jsonValue":"[ \"#onetrust-accept-btn-handler\", \".troy__start-icon\" ]" },
                         { "name":"WEBDRIVERIO_INPUT_ELEMENT_SENDBUTTON","type":"STRING","stringValue":".troy__send" },
                         { "name":"WEBDRIVERIO_OUTPUT_ELEMENT","type":"STRING","stringValue":".from-watson" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT_HASH","type":"STRING","stringValue":"HASH" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT_HASH_SELECTOR","type":"STRING","stringValue":"./div[contains(@class,'message-inner')]/div[contains(@class,'text')]" },
                         { "name":"WEBDRIVERIO_IGNOREWELCOMEMESSAGES","type":"INT","intValue":1 },
                         { "name":"WEBDRIVERIO_SCREENSHOTS","type":"STRING","stringValue":"onstop" }
                     ]
