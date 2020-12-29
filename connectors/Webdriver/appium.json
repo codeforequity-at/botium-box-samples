@@ -1,0 +1,92 @@
+{
+    "mutation": "createTestProject",
+    "data": {
+        "name": "Botium Samples - Appium",
+        "description": "Test Suite for Appium Connector",
+        "code": "Botium-Samples-Appium",
+        "tags": {
+            "set": [
+                "BotiumSamples",
+                "Appium"
+            ]
+        },
+        "deviceSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Appium",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Appium"
+                        ]
+                    },
+                    "provider": {
+                        "connect": {
+                            "name": "Saucelabs.com"
+                      }
+                    },
+                    "devices": {
+                        "create": [
+                            {
+                                "name": "Samsung Galaxy S6 GoogleAPI Emulator",
+                                "type": "MOBILEAPP",
+                                "capabilities": "{ \"deviceName\": \"Samsung Galaxy S6 GoogleAPI Emulator\", \"platformName\": \"Android\", \"platformVersion\": \"7.0\" }"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "chatbot": {
+            "create": {
+                "name": "Botium Samples - Appium Bot",
+                "tags": {
+                    "set": [
+                        "BotiumSamples",
+                        "Appium"
+                    ]
+                },
+                "capabilities": {
+                    "create": [
+                        { "name":"CONTAINERMODE","type":"STRING","stringValue":"webdriverio" },
+                        { "name":"WEBDRIVERIO_APP","type":"STRING","stringValue":"https://github.com/Hariofspades/ChatBot/raw/master/app/hari-bot.apk" },
+                        { "name":"WEBDRIVERIO_APPPACKAGE","type":"STRING","stringValue":"com.hariofspades.chatbot" },
+                        { "name":"WEBDRIVERIO_APPACTIVITY","type":"STRING","stringValue":"com.hariofspades.chatbot.MainActivity" },
+                        { "name":"WEBDRIVERIO_INPUT_ELEMENT","type":"STRING","stringValue":"//*[@resource-id=\"com.hariofspades.chatbot:id/et_message\"]" },
+                        { "name":"WEBDRIVERIO_INPUT_ELEMENT_SENDBUTTON","type":"STRING","stringValue":"//*[@resource-id=\"com.hariofspades.chatbot:id/btn_send\"]" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT","type":"STRING","stringValue":"//*[@resource-id=\"com.hariofspades.chatbot:id/chatMessageView\" and name(./*[1])=\"android.widget.ImageView\"]" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT_TEXT","type":"STRING","stringValue":".//*[@resource-id=\"com.hariofspades.chatbot:id/text\"]" },
+                        { "name":"WEBDRIVERIO_OUTPUT_ELEMENT_HASH","type":"STRING","stringValue":"INDEX" },
+                        { "name":"WEBDRIVERIO_IGNOREUPFRONTMESSAGES","type":"BOOLEAN","booleanValue":true },
+                        { "name":"WEBDRIVERIO_SCREENSHOTS","type":"STRING","stringValue":"onstop" }
+                    ]
+                }
+            }
+        },
+        "testSets": {
+            "create": [
+                {
+                    "name": "Botium Samples - Appium Sample",
+                    "tags": {
+                        "set": [
+                            "BotiumSamples",
+                            "Appium"
+                        ]
+                    },
+                    "expandConvos": false,
+                    "expandUtterancesToConvos": false,
+                    "expandScriptingMemory": false,
+                    "scripts": {
+                        "create": [
+                            {
+                            "name": "hi",
+                            "scriptType": "SCRIPTING_TYPE_CONVO",
+                            "script": "hi\n\n#me\nhello\n\n#bot\n\n"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
